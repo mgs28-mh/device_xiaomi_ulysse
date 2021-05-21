@@ -27,5 +27,8 @@ TARGET_OTA_ASSERT_DEVICE := ulysse,ugglite,ugg
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 10332634112 # 10332650496 - 16384
 BOARD_VENDORIMAGE_PARTITION_SIZE   := 536870912
 
+# SELinux
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/biometrics/sepolicy
+
 # Inherit from the proprietary version
 -include vendor/xiaomi/ulysse/BoardConfigVendor.mk
