@@ -1,0 +1,5 @@
+# All unpinned blobs below are extracted from ugg-user 7.1.2 N2G47H V11.0.2.0.NDKMIXM release-keys
+
+# Fingerprint - FPC
+lib64/hw/fingerprint.msm8937.so:vendor/lib64/hw/fingerprint.default.so
+lib64/lib_fpc_tac_shared.so:vendor/lib64/lib_fpc_tac_shared.so
