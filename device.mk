@@ -40,7 +40,7 @@ PRODUCT_COPY_FILES += \
 
 # Shims
 PRODUCT_PACKAGES += \
-    libbinder_shim
+    libshims_binder
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
