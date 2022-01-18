@@ -22,20 +22,21 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/ulysse/device.mk)
 
 # Inherit some common AOSP stuff.
-$(call inherit-product, vendor/gabuters/config/common_full_phone.mk)
+$(call inherit-product, vendor/nusantara/config/common_full_phone.mk)
 
 # GAPPS
 TARGET_GAPPS_ARCH := arm64
 TARGET_BOOT_ANIMATION_RES := 720
-TARGET_INCLUDE_STOCK_ARCORE := false
-TARGET_INCLUDE_LIVE_WALLPAPERS := false
-TARGET_FACE_UNLOCK_SUPPORTED := true
-GABUTERS_BUILD_TYPE := Chakra
+IS_PHONE := true
+NAD_BUILD_TYPE := OFFICIAL
 TARGET_SUPPORTS_GOOGLE_RECORDER := false
+TARGET_INCLUDE_STOCK_ACORE := false
+TARGET_INCLUDE_LIVE_WALLPAPERS := false
+USE_LAWNCHAIR := true
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := ulysse
-PRODUCT_NAME := gabuters_ulysse
+PRODUCT_NAME := nad_ulysse
 BOARD_VENDOR := Xiaomi
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 5A
@@ -45,9 +46,8 @@ TARGET_VENDOR := Xiaomi
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="raven-user 12 SQ3A.220605.009.B1 8650216 release-keys"
-
-BUILD_FINGERPRINT := "google/raven/raven:12/SQ3A.220605.009.B1/8650216:user/release-keys"
+    PRIVATE_BUILD_DESC="raven-user 13 TP1A.220905.004 8927612 release-keys"
+    BUILD_FINGERPRINT="google/raven/raven:13/TP1A.220905.004/8927612:user/release-keys"
 
 PRODUCT_PROPERTY_OVERRIDES += \
  ro.build.fingerprint=$(BUILD_FINGERPRINT)
