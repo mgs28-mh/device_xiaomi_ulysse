@@ -30,7 +30,7 @@ TARGET_BOOT_ANIMATION_RES := 720
 TARGET_INCLUDE_STOCK_ARCORE := false
 TARGET_INCLUDE_LIVE_WALLPAPERS := false
 TARGET_FACE_UNLOCK_SUPPORTED := true
-GABUTERS_BUILD_TYPE := Dewandaru
+GABUTERS_BUILD_TYPE := Chakra
 TARGET_SUPPORTS_GOOGLE_RECORDER := false
 
 # Device identifier. This must come after all inclusions
@@ -45,9 +45,12 @@ TARGET_VENDOR := Xiaomi
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="redfin-user 12 SQ1A.220105.002 7961164 release-keys"
+    PRIVATE_BUILD_DESC="raven-user 12 SQ1D.220105.007 8030435 release-keys"
 
-BUILD_FINGERPRINT := "google/redfin/redfin:12/SQ1A.220105.002/7961164:user/release-keys"
+BUILD_FINGERPRINT := "google/raven/raven:12/SQ1D.220105.007/8030436:user/release-keys"
+
+PRODUCT_PROPERTY_OVERRIDES += \
+ ro.build.fingerprint=$(BUILD_FINGERPRINT)
 
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage/lineage-sdk
