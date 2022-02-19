@@ -13,6 +13,9 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <string name="maintainer_name">hand08</string>
+    <string name="maintainer_name">Galang Saputra</string>
+    <!-- Overlay for maintener --> 
+    <string name="github_username">mgs28-mh</string> 
+    <string name="telegram_username">hand08</string>
 
 </resources>
