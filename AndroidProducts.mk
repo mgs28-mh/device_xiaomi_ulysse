@@ -15,4 +15,4 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/lineage_ulysse.mk \
-    $(LOCAL_DIR)/rr_ulysse.mk
+    $(LOCAL_DIR)/nad_ulysse.mk

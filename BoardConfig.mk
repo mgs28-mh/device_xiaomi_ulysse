@@ -33,13 +33,13 @@ DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest-l3.xml
 endif
 
 # Kernel
-ifeq ($(TARGET_KERNEL_VERSION),3.18)
-TARGET_KERNEL_CONFIG := ulysse_defconfig
-TARGET_KERNEL_SOURCE := kernel/xiaomi/ulysse-$(TARGET_KERNEL_VERSION)
-else ifeq ($(TARGET_KERNEL_VERSION),4.9)
-TARGET_KERNEL_CONFIG := mi8937_defconfig
-TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8937
-endif
+#ifeq ($(TARGET_KERNEL_VERSION),3.18)
+#TARGET_KERNEL_CONFIG := ulysse_defconfig
+#TARGET_KERNEL_SOURCE := kernel/xiaomi/ulysse-$(TARGET_KERNEL_VERSION)
+#else ifeq ($(TARGET_KERNEL_VERSION),4.9)
+#TARGET_KERNEL_CONFIG := mi8937_defconfig
+#TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8937
+#endif
 
 # Partitions
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
