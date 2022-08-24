@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/gabuters_ulysse.mk
+    $(LOCAL_DIR)/havoc_ulysse.mk
 
 COMMON_LUNCH_CHOICES := \
-    gabuters_ulysse-user \
-    gabuters_ulysse-userdebug \
-    gabuters_ulysse-eng
+    havoc_ulysse-user \
+    havoc_ulysse-userdebug \
+    havoc_ulysse-eng

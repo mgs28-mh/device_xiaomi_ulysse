@@ -18,24 +18,26 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit from mido device
+# Inherit from ulysse device
 $(call inherit-product, device/xiaomi/ulysse/device.mk)
 
-# Inherit some common AOSP stuff.
-$(call inherit-product, vendor/gabuters/config/common_full_phone.mk)
+# Inherit some common HAVOC stuff.
+$(call inherit-product, vendor/havoc/config/common_full_phone.mk)
 
-# GAPPS
+#Havoc-OS Configs
+HAVOC_MAINTAINER := CutieMe(hand08)
+HAVOC_GROUP_URL := https://t.me/havoc_ulysse
+HAVOC_BUILD_TYPE := OFFICIAL
 TARGET_GAPPS_ARCH := arm64
 TARGET_BOOT_ANIMATION_RES := 720
 TARGET_INCLUDE_STOCK_ARCORE := false
 TARGET_INCLUDE_LIVE_WALLPAPERS := false
 TARGET_FACE_UNLOCK_SUPPORTED := true
-GABUTERS_BUILD_TYPE := Chakra
 TARGET_SUPPORTS_GOOGLE_RECORDER := false
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := ulysse
-PRODUCT_NAME := gabuters_ulysse
+PRODUCT_NAME := havoc_ulysse
 BOARD_VENDOR := Xiaomi
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 5A
