@@ -14,11 +14,7 @@
 # limitations under the License.
 #
 
-ifneq ($(wildcard vendor/xiaomi/ulysse),)
 $(call inherit-product, vendor/xiaomi/ulysse/ulysse-vendor.mk)
-else
-$(call inherit-product, vendor/xiaomi/ugg/ugg-vendor.mk)
-endif
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk)
 
 # Overlay
@@ -33,35 +29,12 @@ $(call inherit-product, device/xiaomi/ulysse-common/ulysse.mk)
 
 # Permissions
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml \
-    $(LOCAL_PATH)/permissions/blank.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/blank.xml
-
-# Fingerprint
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1 \
-    libunwind \
-    vendor.goodix.hardware.biometrics.fingerprint@2.1
 
 # Input
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/gf3208.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gf3208.kl \
     $(LOCAL_PATH)/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-fpc.kl \
     $(LOCAL_PATH)/keylayout/uinput-gf.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-gf.kl
-
-# Properties
--include device/xiaomi/ulysse/prop.mk
-
-# Ramdisk
-PRODUCT_PACKAGES += \
-    init.goodix.sh \
-    init.ulysse.rc
-
-PRODUCT_PACKAGES += \
-    init.qcom.early_boot.sh
-
-# Shims
-PRODUCT_PACKAGES += \
-    libbinder_shim
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
