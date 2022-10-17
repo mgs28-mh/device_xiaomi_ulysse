@@ -33,6 +33,7 @@ on property:ro.vendor.xiaomi.device=ugg
     enable vendor.fps_hal
 
 on property:ro.vendor.xiaomi.device=ugglite
+    mount none /vendor/etc/permissions/blank.xml /vendor/etc/permissions/android.hardware.fingerprint.xml bind
     stop vendor.fps_hal
 
 on property:ro.vendor.fingerprint.failed=1
