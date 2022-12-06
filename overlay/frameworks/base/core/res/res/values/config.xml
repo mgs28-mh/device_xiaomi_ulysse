@@ -14,10 +14,12 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- Whether notify fingerprint client of successful cancelled authentication -->
+   <!-- Whether notify fingerprint client of successful cancelled authentication -->
    <bool name="config_notifyClientOnFingerprintCancelSuccess">true</bool>
 
-    <!-- Whether to cleanup fingerprints upon connection to the daemon and when user switches -->
+   <!-- Whether to cleanup fingerprints upon connection to the daemon and when user switches -->
    <bool name="config_cleanupUnusedFingerprints">false</bool>
 
+   <!-- Whether to cancel fingerprint operation if not idle -->
+   <bool name="config_fpCancelIfNotIdle">true</bool>
 </resources>

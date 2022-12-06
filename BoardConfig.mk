@@ -16,7 +16,7 @@
 # Inherit from common ulysse-common
 -include device/xiaomi/ulysse-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/xiaomi/ulysse
+DEVICE_PATH := device/xiaomi/ugg
 
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/vendor.prop
 
