@@ -14,36 +14,16 @@
 # limitations under the License.
 #
 
-$(call inherit-product, vendor/xiaomi/ulysse/ulysse-vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk)
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 PRODUCT_PACKAGES += \
-    xiaomi_ugg_overlay \
     xiaomi_ugglite_overlay
 
 # Inherit from ulysse-common
 $(call inherit-product, device/xiaomi/ulysse-common/ulysse.mk)
-
-# Permissions
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_fingerprint/android.hardware.fingerprint.xml
-
-# Fingerprint
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.xiaomi_ulysse
-
-# Shims
-PRODUCT_PACKAGES += \
-    libshims_binder
-
-# Input
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/keylayout/gf3208.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gf3208.kl \
-    $(LOCAL_PATH)/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-fpc.kl \
-    $(LOCAL_PATH)/keylayout/uinput-gf.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-gf.kl
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \

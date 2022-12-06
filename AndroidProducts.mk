@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/nad_ulysse.mk
+    $(LOCAL_DIR)/nad_ugglite.mk
 
 COMMON_LUNCH_CHOICES := \
-    nad_ulysse-user \
-    nad_ulysse-userdebug \
-    nad_ulysse-eng
+    nad_ugglite-user \
+    nad_ugglite-userdebug \
+    nad_ugglite-eng

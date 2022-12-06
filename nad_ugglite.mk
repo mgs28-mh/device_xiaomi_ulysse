@@ -18,8 +18,8 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit from mido device
-$(call inherit-product, device/xiaomi/ulysse/device.mk)
+# Inherit from ugglite device
+$(call inherit-product, device/xiaomi/ugglite/device.mk)
 
 # Inherit some common AOSP stuff.
 $(call inherit-product, vendor/nusantara/config/common_full_phone.mk)
@@ -35,8 +35,8 @@ TARGET_INCLUDE_LIVE_WALLPAPERS := false
 USE_LAWNCHAIR := true
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := ulysse
-PRODUCT_NAME := nad_ulysse
+PRODUCT_DEVICE := ugglite
+PRODUCT_NAME := nad_ugglite
 BOARD_VENDOR := Xiaomi
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 5A
@@ -51,6 +51,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
  ro.build.fingerprint=$(BUILD_FINGERPRINT)
-
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-lineage/lineage-sdk

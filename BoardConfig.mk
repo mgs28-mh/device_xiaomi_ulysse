@@ -16,9 +16,7 @@
 # Inherit from common ulysse-common
 -include device/xiaomi/ulysse-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/xiaomi/ulysse
-
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/vendor.prop
+DEVICE_PATH := device/xiaomi/ugglite
 
 # Asserts
 TARGET_OTA_ASSERT_DEVICE := ulysse,ugglite,ugg
@@ -26,9 +24,3 @@ TARGET_OTA_ASSERT_DEVICE := ulysse,ugglite,ugg
 # Partitions - ugglite
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 10332634112 # 10332650496 - 16384
 BOARD_VENDORIMAGE_PARTITION_SIZE   := 536870912
-
-# Sepolicy
-BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/biometrics/sepolicy
-
-# Inherit from the proprietary version
-include vendor/xiaomi/ulysse/BoardConfigVendor.mk
