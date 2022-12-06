@@ -21,6 +21,10 @@ DEVICE_PATH := device/xiaomi/ugglite
 # Asserts
 TARGET_OTA_ASSERT_DEVICE := ulysse,ugglite,ugg
 
+# init
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_ugglite
+TARGET_RECOVERY_DEVICE_MODULES := libinit_ugglite
+
 # Partitions - ugglite
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 10332634112 # 10332650496 - 16384
 BOARD_VENDORIMAGE_PARTITION_SIZE   := 536870912
