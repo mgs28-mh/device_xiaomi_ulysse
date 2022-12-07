@@ -32,8 +32,5 @@ on property:ro.vendor.xiaomi.device=ugg
     setprop ro.boot.product.hardware.sku fingerprint
     enable vendor.fps_hal
 
-on property:ro.vendor.xiaomi.device=ugglite
-    stop vendor.fps_hal
-
 on property:ro.vendor.fingerprint.failed=1
     stop vendor.fps_hal

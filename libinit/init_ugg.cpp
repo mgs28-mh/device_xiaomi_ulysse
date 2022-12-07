@@ -86,7 +86,7 @@ static void determine_device()
 {
     std::string fdt_model;
     android::base::ReadFileToString("/sys/firmware/devicetree/base/model", &fdt_model, true);
-    (fdt_model.find("MSM8940") != fdt_model.npos)
+    (fdt_model.find("MSM8940") != fdt_model.npos);
         set_variant_props(ugg_info);
 }
 
